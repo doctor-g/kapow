@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{microtype}
+\usepackage{multicol}
+
+\input{definitions}
+
+\begin{document}
+\thispagestyle{empty}
+\setlength\parindent{0pt}
+
+\begin{multicols}{2}
+
+  \begin{minipage}{0.5\textwidth}
+    \section*{Narrator Moves}
+    \newenvironment{narratormove}[2]
+    {\item #1}
+    {}
+    \begin{itemize}\itemsep0px
+      \input{narratormoves}
+    \end{itemize}
+  \end{minipage}
+
+  \begin{minipage}{0.5\textwidth}
+    \section*{Principles}
+    \newenvironment{principle}[2]{\item #1}{}
+    \begin{itemize}\itemsep0px
+      \input{principles}
+    \end{itemize}
+  \end{minipage}
+
+
+\end{multicols}
+
+\section*{Special Moves}
+\newenvironment{movedef}[3]{\subsection*{#1}#2}{}
+\input{specialmoves}
+
+\end{document}

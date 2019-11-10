@@ -1,0 +1,489 @@
+\documentclass[letterpaper]{article}
+\usepackage{fullpage}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{pifont}
+\usepackage{multicol}
+\usepackage{titlesec}
+
+\pagestyle{empty}
+\setlength\parindent{0pt}
+
+\include{definitions}
+
+\titlespacing*{\subsection}{0pt}{\baselineskip}{0pt}
+
+\newsavebox{\footer}
+
+% Section heading for the creation page
+\newcommand{\head}{\subsection*}
+
+% Annotate the moves connected to an attribute
+\newcommand{\annotate}[1]{\textit{\small #1}}
+
+% Parameters:
+% #1: The name of the playbook.
+% #2: Extra creation sections (e.g. Gear)
+% #3: Bonds instructions
+% #4: Playbook moves
+\newenvironment{playbook}[5]
+{
+  \newcommand{\pbname}{#1}
+  \newcommand{\pbblurb}{#2}
+  \newcommand{\pbextra}{#3}
+  \newcommand{\pbbonds}{#4}
+  \newcommand{\pbmoves}{#5}
+  
+  \newpage
+
+  \begin{multicols}{2}
+    [
+    \section*{Introducing the \pbname}
+    \textit{#2}
+    ]
+
+    \head{Heroic Identity}
+    Come up with a name for your Hero and describe their heroic
+    appearance. Remember, all heroes need a mask to protect their
+    secret identities.
+
+    \head{Secret Identity}
+    Write down your hero's real name and appearance.
+    Leave the occupation blank for now.
+
+    \head{Attributes}
+    Choose one attribute to have a +2 and another to have +1.
+    Then, either set the other two at 0 or, if you prefer, set one
+    at +1 and one at -1.
+
+    Your Endurance is equal to your Mighty +4. Draw that many
+    empty boxes on your character sheet and mark each of the final
+    two with ``-1''.
+
+    \head{Moves}
+    Choose two of the \pbname{} Moves in your playbook. You have these
+    in addition to all the basic and special moves.
+
+    \pbextra{}
+    
+    \head{Contact}
+    Create one Contact and answer the following questions about them.
+    \begin{choices}
+    \item Do they know you as a hero, as your secret identity, or both?
+      If both, do they know that you are the same person?
+    \item How do you know each other?
+    \item Why do they trust you?
+    \end{choices}
+    Write a +2 next to this contact. This is their
+    \textit{reliability}---your bonus to exhort them to act.
+    
+    \head{Bonds}
+    All players introduce their heroes by name and look.
+    Write down each hero's name under Bonds in your playbook.
+
+    Then, go around again to establish initial Bonds.
+
+    \pbbonds{}
+
+    On others' turns, answer their questions as you like.
+
+    \head{Improvement}
+    Whenever you fail a roll or reset your Bond with another hero,
+    mark one Experience. When you mark your fifth Experience,
+    do one of the following, but you can choose each only once.
+    \begin{chooseone}
+    \item Add +1 Mighty
+    \item Add +1 Focused
+    \item Add +1 Intellectual
+    \item Add +1 Savvy
+    \item Add +1 Endurance
+    \item Choose another \pbname{} move
+    \end{chooseone}
+    
+    
+  \end{multicols}
+
+ 
+  % Savebox allows us to use the variable in the enddef, as shown
+  % in http://joshua.smcvt.edu/latex2e/_005cnewenvironment-_0026-_005crenewenvironment.html
+  \sbox\footer{\large \textit{\uppercase{#1}}}
+
+  \newpage
+  
+  \begin{minipage}{0.6\textwidth}
+  {\Large Name:} \bigskip\\
+  {\Large Heroic Appearance:}\\
+  \end{minipage}
+  \begin{minipage}{0.4\textwidth}
+    Real Name:\\
+    Occupation:\\
+    Unmasked Appearance:\\
+  \end{minipage}
+  \bigskip
+
+
+  \setlength{\columnsep}{1cm}
+  \begin{minipage}{0.5\textwidth}
+  \begin{tabular}{lll}
+    \large{Mighty}
+      & \framebox[0.25in]{\strut}
+      & \annotate{Rumble, Heroic Feat} \\
+    \large{Focused}
+      & \framebox[0.25in]{\strut}
+      & \annotate{Prowl, Race/Chase} \\
+    \large{Intellectual}
+      & \framebox[0.25in]{\strut}
+      & \annotate{Investigate} \\
+    \large{Savvy}
+      & \framebox[0.25in]{\strut}
+      & \annotate{Exhort, Scrutinize} \\
+  \end{tabular}
+  \end{minipage}
+  \begin{minipage}{0.5\textwidth}
+    \large{Forward:} \hspace{2cm}  \large{Hold:}\\
+    
+    \large{Experience:}
+    \framebox[0.25in]{\strut}
+    \framebox[0.25in]{\strut}
+    \framebox[0.25in]{\strut}
+    \framebox[0.25in]{\strut}
+    \framebox[0.25in]{\strut}\\
+    
+    \noindent \large{Endurance:}\\
+  \end{minipage}
+  \medskip
+
+  \begin{multicols}{2}
+  \begin{minipage}{0.5\textwidth}
+  {\large \pbname{} Moves:}
+  \pbmoves{}
+  \end{minipage}
+  \bigskip
+
+  \begin{minipage}{0.5\textwidth}
+  {\large Contacts:}
+  \vspace{3cm}
+  \end{minipage}
+
+  \begin{minipage}{0.5\textwidth}
+  \noindent {\large Bonds: \annotate{Help/Hinder}}
+  \vspace{3cm}
+  \end{minipage}
+
+  \begin{minipage}{0.5\textwidth}
+  \noindent {\large Gear:}
+  \vspace{3cm}
+  \end{minipage}
+  
+  \end{multicols}
+}
+{
+   \vfill
+   \hfill{} \usebox{\footer}
+}
+
+\newenvironment{playbookmoves}
+{\begin{itemize}[label=\ding{109}]}
+{\end{itemize}}
+
+\newcommand{\comm}{You have a two-way radio for communicating with the
+  rest of your team.}
+
+\begin{document}
+
+\begin{playbook}{Daredevil}
+{
+  Agile and fearless, leaping into danger, always willing to
+  risk their own safety to save another.
+}
+{
+  \head{Gear}
+  \comm{}
+
+  You may also choose one of the following:
+  \begin{chooseone}
+  \item A signature blunt weapon (+1 brawl)
+  \item A signature thrown blunt weapon (inflict Endurance damage on heroic feat)
+  \end{chooseone}
+}
+{
+  On your turn, ask any of the following:
+  \begin{choices}
+  \item \textit{Which of you impressed me with your bravery?}
+    For those characters, write Bond +2.
+  \item \textit{Which of you strikes me as unreliable?}
+    For those characters, write Bond -1.
+  \end{choices}
+
+  For everyone else, write Bond +1. They have seen what you can do,
+  and they are impressed.
+}
+{
+  \begin{playbookmoves}
+  \item \move{Precise strikes}: When you rumble, roll+Focused instead.
+  \item \move{Escape artist}: When you escape bondage, roll+Focused. On a 10+,
+    you Silently escape from your bonds. On a 7--9, you escape from your
+    bonds and choose one of the following.
+    \begin{choices}
+    \item An ally is placed in danger.
+    \item Your escape is detected.
+    \end{choices}
+    \onamiss{}
+  \item \move{Parkour}: When you run through otherwise impassable
+    obstacles, roll+Focused.  On a 10+, you successfully maneuver
+    through. On a 7--9, you maneuver through but must choose one of the
+    following.
+    \begin{choices}
+    \item Lose Endurance.
+    \item An ally is placed in danger.
+    \end{choices}
+    \onamiss{}
+  \end{playbookmoves}
+}
+\end{playbook}
+
+\begin{playbook}{Enigma}
+{
+  A mystery even to their own allies.
+}    
+{
+  \head{Gear}
+  Choose one of the following:
+  \begin{chooseone}
+  \item A two-radio for communicating with the rest of the team.
+  \item Smoke bombs: +1 to Appear Fortuitously and Disappear Mysteriously when used.
+  \item Gas gun: Gain the option to knock out a lackey in a rumble.
+  \end{chooseone}
+  
+  \head{Secrets}
+  Regardless of what was chosen for the Team sheet, you
+  neither live with nor share a HQ with the rest of them,
+  nor do any of them know your secret identity.
+  Instead, your HQ is a hidden room in your home or apartment.
+  Answer the following questions:
+  \begin{choices}
+  \item Why is it important that you keep your identity secret?
+  \item Who knows the location of your HQ, if anyone?
+  \end{choices}
+}
+{
+  On your turn, ask any of the following.
+  \begin{choices}
+  \item \textit{Whose secret identity do I know?}
+    For those characters, write Bond +2.
+  \item \textit{Who attempted to discover my identity against my will?}
+    for those characters, write Bond -2.
+  \end{choices}
+  For everyone else, write Bond +1. Even though they do not know you,
+  they have seen that they can trust you.
+}
+{
+  \begin{playbookmoves}
+  \item \move{Appear fortuitously}: When you enter a scene in progress,
+    roll+Intellectual. On a 10+, take +2 forward. On a 7--9, choose one.
+    \begin{choices}
+    \item The entrance is disorienting; take -1 forward.
+    \item Place an ally or innocent in danger.
+    \end{choices}
+    \onamiss{}
+  \item \move{Disappear mysteriously}: When you attempt to escape
+    danger from a scene in progress, roll+focused. On a 10+, you leave
+    the scene and dissipate any danger you were in. On a 7--9, you
+    leave the scene, but a friendly character in the scene is
+    endangered. \onamiss{}
+  \item \move{Power of the unknown}: When you exhort an NPC to do something,
+    add Savvy.
+  \end{playbookmoves}
+}
+\end{playbook}
+
+\begin{playbook}{Face}
+{
+  Front and center, leading the team in the fight for justice.
+}
+{
+  \head{Gear}
+  \comm{}
+  Additionally, choose one of the following.
+  \begin{chooseone}
+  \item Team Symbol: +2 to exhort a friendly NPC when used.
+  \item Shield: +2 to help allies in a rumble.
+  \end{chooseone}
+}
+{
+  On your turn, ask any of the following:
+  \begin{choices}
+  \item \textit{Who proved their loyalty to me in a stressful situation?}
+    For those characters, write Bond +3.
+    
+  \item \textit{Who served under my management or command in other circumstances?}
+    For those characters, write Bond +2.
+  \end{choices}
+
+  For everyone else, write Bond +1. The group knows you would not
+  lead them astray.
+}
+{
+  \begin{playbookmoves}
+  \item \move{Leadership}: When you \move{help} an ally, add Savvy
+    and they take +1 forward.
+  \item \move{Inspiring}: When you exhort, add +1.
+  \item \move{Orator}: When you deliver a heroic monologue,
+    roll+Savvy. On a 10+, all present allies take +2 forward. On a
+    7--9, all present allies take +1 forward.  \onamiss{}
+  \end{playbookmoves}
+}
+\end{playbook}
+
+\begin{playbook}{Sleuth}
+{
+  Someone has a problem? You can find the answers.
+}    
+{
+  \head{Gear}
+  \comm{}
+  Additionally, choose one of the following.
+  \begin{chooseone}
+  \item Concealing trenchcoat: +1 to prowl and stake out.
+  \item Notebook: +1 to scrutinize.
+  \end{chooseone}
+}
+{
+  On your turn, ask any of the following:
+  \begin{choices}
+  \item \textit{Which of you do I know something secret about?}
+    For those characters, write Bond +2.
+  \item \textit{Which of you know something secret about me?}
+    For those characters, write Bond +1.
+  \end{choices}
+  
+  For everyone else, write Bond 0. Your uncanny insight into people
+  and their motivations can sometimes put your teammates on edge.
+}
+{
+  \begin{playbookmoves}
+  \item \move{Stake Out}: When you stake out a location, roll+Focused. On a 10+, choose 3. On a 7--9, choose 1.
+    \begin{choices}
+    \item Your target arrives at or is discovered at your stakeout.
+    \item Discover a fact about the defenses of the location.
+    \item Reveal a pattern that you can exploit later (hold, +2 when exploited)
+    \item Prevent your stakeout from being discovered.
+    \end{choices}
+    \onamiss{}
+  \item \move{Street Smarts}: When you investigate, add Savvy.
+  \item \move{Not born yesterday}: When you scrutinize, add Intellectual.
+  \end{playbookmoves}
+}
+\end{playbook}
+
+\begin{playbook}{Technologist}
+{
+  Has the tools and the know-how to get the job done.
+}
+{
+  \head{Gear}
+  \comm{}
+  You are known for carrying useful gear on your adventures;
+  choose how you would carry such gear.
+  \begin{chooseone}
+  \item Pocketed coat
+  \item Utility belt
+  \item Satchel
+  \item Backpack
+  \end{chooseone}
+}
+{
+  On your turn, ask any of the following.
+  \begin{choices}
+  \item \textit{Which of you shares a passion for technology?}
+    For those characters, write Bond +2
+  \item \textit{Which of you were endangered because of one of my gadgets?}
+    For those characters, write Bond +1.
+  \end{choices}
+  For everyone else, write Bond 0. You spend so much time with your
+  gadgets and computers that your relationship with your teammates
+  is not as strong as it could be.
+}
+{
+  \begin{playbookmoves}
+  \item \move{Gadgeteer}: When you declare what gadget you have brought and how you wish to use it, then roll+Intellectual. On a 10+, the gadget proves useful toward your desired end. On a 7--9, choose one:
+    \begin{choices}
+      \item Place an ally or innocent in danger
+      \item Lose one Endurance
+      \end{choices}
+      \onamiss{}
+    \item \move{Supercomputer}:
+      Choose the location of your supercomputer:
+      \begin{chooseone}
+      \item Your home
+      \item Your HQ
+      \item Your place of employment
+      \end{chooseone}
+      Add to your Gear a remote terminal to your supercomputer.
+      When you investigate and have access to your supercomputer, add +2. 
+    \item \move{Hacker}: When you hack a system, roll+Intellectual. On a
+      10+, choose~3. On a 7--9, choose~1.
+      \begin{choices}
+      \item Disable a system or device.
+      \item Observe or gather data on a distant or hidden area.
+      \item Discover a fact about a threat, system, or organization.
+      \item Prevent another character from accessing or using the system.
+      \item Find the location of a person or thing.
+      \item Prevent the hack from being discovered.
+      \end{choices}
+      \onamiss{}
+  \end{playbookmoves}
+}
+\end{playbook}
+
+\begin{playbook}{Tough}
+{
+  When it gets down to brass tacks, the team is going to need some muscle.
+}    
+{
+  \head{Gear}
+  \comm{}
+  Additionally choose one of the following.
+  \begin{chooseone}
+  \item Iconic weapon: +1 rumble when wielding.
+  \item Armored suit: Automatically reduce Endurance loss by one
+    when you take a hit.
+  \end{chooseone}
+
+  \head{Training}
+  Choose the training background.
+  \begin{chooseone}
+  \item Martial arts 
+  \item Boxing
+  \item Wrestling
+  \end{chooseone}
+
+  Name your \textit{Special Move} based on your selection.
+}
+{
+  On your turn, ask any of the following:
+  \begin{choices}
+  \item \textit{Which of you saved me from danger when I got in over my head?}
+    For those characters, write Bond +3.
+  \item \textit{Which of you are training to improve your physique and willpower?} For those characters, write Bond +2.
+  \end{choices}
+  For everyone else, write Bond +1. You've got their backs.
+}
+{
+  \begin{playbookmoves}
+  \item \move{Endurance Training}: Add mighty to your Endurance again.
+  \item \move{Second Wind}: When you get your second wind,
+    roll+Mighty. On a 10+, recover all Endurance. On a 7--9, recover
+    two Endurance, up to your maximum. \onamiss{}
+  \item \move{Iron Will}: You may ignore the penalties from being imperiled.
+    Remove the ``-1'' markers from your Endurance boxes.
+  \item \move{Special Move}: When you rumble, you have the following
+    additional option.
+    \begin{choices}
+    \item Incapacitate your enemy with your special move.
+    \end{choices}
+  \end{playbookmoves}
+}
+\end{playbook}
+
+\end{document}

@@ -1,0 +1,719 @@
+\documentclass[letterpaper]{report}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{url}
+\usepackage{changepage}
+
+\title{\kapow{}!\\The Campy Superhero RPG}
+
+\include{definitions}
+
+\begin{document}
+
+\vspace*{\fill}
+\thispagestyle{empty}
+\begin{centering}
+  \includegraphics[width=3in]{logo}\\
+  {\Huge The Campy Superhero Role-Playing Game}\\
+  \vspace{1in}
+  {\large Rules Version 1.0.0-beta1}\\
+\end{centering}
+\vspace*{\fill}
+
+
+\newpage
+\thispagestyle{empty}
+\vspace*{\fill}
+
+\noindent \copyright 2019 Paul Gestwicki
+\vspace{0.5cm}
+
+\noindent Playtesters:
+Alex,
+Austin Tinkel,
+Chris Bucker,
+Daniel,
+David Mitchell,
+Gwyn Hultquist,
+Leo,
+Nicholas Burrell,
+and 
+Peter.
+
+\vspace{0.5cm}
+
+\noindent Special thanks to Jessica Gestwicki
+
+
+\vspace{0.5cm}
+
+\noindent
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International license (CC BY-NC-SA 4.0).\\
+
+\begin{centering}
+  % Note: Requires installing texlive-font-utils to automatically convert.
+  \includegraphics[width=3cm]{by-nc-sa}\\
+\end{centering}
+
+\newpage
+\pagenumbering{roman}
+
+\tableofcontents{}
+
+\chapter{The Basics}
+\pagenumbering{arabic}
+
+\section{Campy Heroics}
+
+Welcome to \kapow{}!
+
+This tabletop role-playing game provides a framework for you
+and your friends to create exciting, entertaining, and memorable
+stories about a people in tights and masks who fight for justice.
+
+This is a \textit{campy} superhero world, and the rules are designed
+to support stories that fall into this genre. The heroes are noble and
+honest, and the city doesn't know what they would do without them.
+The villains are over-the-top sinister, with schemes that both boggle
+and delight the imagination.
+When words fail, fists prevail.
+Characters use smoke bombs and knock-out gas, not guns and shivs.
+
+The colors are bold and the characters are fundamentally simple.
+There are no gritty 1990s anti-heroes, and there are no alternate
+universe crossover events.
+There are neither mutants nor aliens, and villains with anything you might
+call a ``super power'' are extremely rare.
+Think 1960s Batman or Johnny Quest, not Superman or the X-Men.
+
+\section{Heroes and Narrators}
+
+The game is designed for a small group of players, ideally no more than six.
+All players but one will be \textit{Heroes} who are trying to save
+their city from the schemes of hyperbolic villains.
+The remaining player will be the \textit{Narrator}, who describes the world
+and how it reacts to the heroes' actions.
+
+Since you're reading this book, you're probably going to be the
+Narrator. Congratulations! You're going to have a great time. With
+just a little genre-appropriate prompting, you should be able to have
+your players solving crimes and punching crooks in no time.
+More guidance is provided for Narrators later in this book, but first
+we have to cover some of the basics.
+
+\subsection*{Playbooks}
+
+Each hero will have a playbook that describes their role on the team.
+Every iconic team brings together different characters with
+different strengths: Frodo has different talents than Gimli;
+Face is sent on missions on which B.\ A.\ Baracus would never succeed;
+Batman can get Robin out of trouble, while Robin\ldots{}, well,
+he mostly gets in trouble.
+The idea behind playbooks will be familiar to those
+who have played \textit{Apocalypse World}
+or any of its Powered by the Apocalypse progeny.
+For those who are new to this style of play but familiar with
+some of the industry standard tabletop RPGs, a playbook is like
+a character class in \textit{Dungeons \& Dragons} or \textit{Pathfinder}.
+
+\subsection*{Attributes}
+A hero has four attributes, which are explained briefly below.
+\begin{itemize}
+\item \emph{Mighty} is a character's physical prowess--their strength,
+  conditioning, and fortitude.
+\item \emph{Focused} is a character's control over his mind and body,
+  represented in their adroitness, precision, and self-control.
+\item \emph{Intellectual} is a character's education and knowledge and their
+  ability to apply these to new situations or problems.
+\item \emph{Savvy} is a character's ability to operate in and manipulate
+  the social world.
+\end{itemize}
+
+There are two other important characteristics of the heroes:
+Endurance and Experience.
+\emph{Endurance} represents how much they can
+exert themselves before exhaustion, or how much of a beating they can
+take before being critically injured.
+Heroes earn \emph{Experience} throughout their adventures
+by learning from failure and working together.
+
+\subsection*{Contacts}
+Each hero also has a Contact, who is someone outside the hero team
+with whom the character has a special bond.
+The hero may know the Contact in their heroic identity or in their
+secret identity, and the Contact may or may not be aware of the
+hero's dual life.
+The contact is willing to do favors for the hero, but doing so also tends
+to get them into trouble with villains' dastardly plots.
+
+At the start of the game, a hero has a +2 to \move{exhort} their
+Contact into action; this is the \textit{reliability} of the contact.
+However, as a Narrator move, the reliability may be weakened (see
+page~\pageref{move:change-reliability}). If the reliability is ever
+reduced to zero, the hero must remove the Contact.
+
+The Narrator is going to want to keep track of the Contacts
+so that they can be used during the game. For example, a Contact
+provides a great place to bring in a hook~(page~\pageref{sec:hook}).
+It is recommended to keep a record of a Contact on an index card,
+noting which hero has the Contact, the identities of which the
+Contact is aware, and the nature of their relationship, along with
+a space for notes you can take during gameplay.
+
+\begin{example}
+  Black Mask's Contact is his butler, Alan. During character
+  creation, the Narrator makes a card like this:
+
+  \begin{centering}
+  \fbox{
+    \begin{minipage}[l]{2.5in}
+      {\sc Alan} \hfill Black Mask\\
+      - Butler\\
+      - Aware of secret identity\\     
+  \end{minipage}
+  }\\
+\end{centering}
+\end{example}
+
+
+\subsection*{Bonds}
+The relationship your hero has with each other hero is
+represented as Bonds. Each hero has a specific Bond rating with
+each other hero on the team, measured from -2 to +3. This impacts
+how well a hero can help (or hinder!) a teammate.
+
+\section{Moves and Rolls}
+Whenever a hero wishes to do something in the world that
+is possible and has a chance of failure, they make a \textbf{move}.
+Opening an unlocked door does not require a move, but kicking a locked
+one open would. Clapping your hands does not require a move, but
+wriggling free when your hands are tied does.
+
+To make a move, you choose the appropriate move from the basic moves
+list or your playbook, then you roll two six-sided dice and add them
+together, along with any relevant modifiers.  Generally speaking, a
+result of 10+ means it is an unmitigated success. A total of 7--9
+means that success comes at a cost. A total of 6 or lower means that
+you have failed and the Narrator will be able to respond with a move
+of their own (see Narrator Moves on page~\pageref{sec:narrator-moves}).
+
+The basic moves that are available to every hero are named below,
+and their full definitions can be found on page~\pageref{sec:basic-moves}.
+\newenvironment{movedef}[\movedefarity]
+{\item #1}{}
+\begin{itemize}
+  \setlength\itemsep{0px}
+  \input{basicmoves}
+\end{itemize}
+
+Failing a roll may put the heroes in a bad situation, but heroes
+can learn from their failures.
+Each time your hero misses a roll, mark one Experience.
+
+\begin{example}
+  Black Mask is in a tussle with a group of lackeys.
+  He rolls a 4, so even with his +1 Might, he fails the roll.
+  The Narrator tells him that the lackeys overwhelm him,
+  pinning him to the wall. The Black Mask learns something
+  that day about fighting too many enemies at once, and
+  he marks one Experience. Meanwhile, the Narrator chooses
+  a move of their own.
+\end{example}
+
+Some moves give players a bonus or penalty \emph{forward}.
+This means that on their next move, they apply that given bonus
+or penalty in full. After the bonus or penalty is applied to a roll,
+it is dismissed; the player no has zero \emph{forward}.
+
+\begin{example}
+  Black Mask and Captain Amazing are eyeing down
+  the brutish bodyguards of the Barracuda.
+  Captain Amazing gives an inspiring speech that grants
+  The Black Mask +2 forward.
+  Black Mask charges into the battle, adding an extra +2 to
+  his rumble move. After mopping the floor with the bodyguards,
+  Black Mask decides to investigate the scene. He already
+  used his +2 forward, so there are no other special modifiers
+  to his investigation.
+\end{example}
+
+Finally, some moves, such as \move{scrutinize}, give a hero \emph{hold}.
+This means that the player marks a number of hold on their character
+sheet and can spend them later for the indicated effect.
+A player can only have \emph{hold} for one purpose at a time:
+if they make a new move that grants \emph{hold}, the previous is lost.
+
+\section{The First Session}
+
+Before the First Session, the Narrator needs to do a little
+preparation: creating a Villain and a short Scheme
+that the heroes can try to unravel.
+See page~\pageref{sec:session-prep} for additional notes
+on how to create Villains and Schemes.
+Make sure you have printed out copies of the playbooks and the moves
+handouts, all of which can be found on the \kapow{} project Web site.
+
+The first time you and your friends sit down to play the game,
+you are going to need to create some characters and the ties
+that bind them together.
+\kapow{} is designed to make character creation fast, fun,
+and interactive.
+
+It's a good idea for the Narrator to start by reminding the players
+about the campy superhero genre.
+After that, they might explain the fundamental systems of the game:
+players roll dice to make moves, and rolls are given bonuses
+based on their character's attributes. 
+
+The first step to making characters is to establish some
+properties of their team.
+Place the Team handout in the middle of the table and follow
+the instructions from there.
+Throughout the team and hero creation process,
+cases where players must commit to a choice
+are presented as open circles (\ding{109}) that
+can be filled in or checked.
+
+When it gets time to choose playbooks, the Narrator can read off
+the short introductory blurb for each.
+Each player selects a playbook for their hero. Two players may not
+choose the same playbook.
+The playbook then walks players through the hero creation process.
+
+Once all the players are in the \emph{Bonds} step, then they go around
+the table introducing themselves.
+As a player shares the name of their hero, each other player should
+write down the hero's name on their own sheets in order to
+track their Bond with that hero.
+Players should 
+mention their character's heroic and secret identities, even if their selected
+background means that their secrets are not known to the other
+players. This can be considered ``off camera'' knowledge that the
+players have but their characters do not.
+Then, the players go around the table again, this time asking
+any optional questions in the \emph{Bonds} section and then documenting
+their initial Bonds.
+Once Bonds are established, the players return to the Team sheet
+for the final team creation steps.
+
+Now that the characters have been created and introduced to each other,
+it's time to get into the adventure.
+The Narrator should give the hook for the adventure and then ask the
+players, ``What do you do?''
+
+
+\chapter{Hero Rules}
+
+As a hero in the game, each interaction you have with the world
+will be a \emph{move}. The general principle of playing \kapow{} is
+``to do it, do it.''
+That is, if you want your character to take action, identify the
+most appropriate move, state it, and roll those dice.
+If you are a new player, the Narrator may help you turn your
+intention into moves, but this will become natural to you
+in short order.
+
+This chapter includes the definitions for all the \emph{basic moves}
+to which all heroes have access. Heroes also have playbook-specific
+moves that they may have selected during character creation or
+advancement.  There are also a few \emph{special moves} that come up
+in particular situations rather than in response to your intention.
+The end of the chapter includes rules for dealing with
+Endurance recovery and injury as well as optional rules for very young
+players.
+
+\renewenvironment{movedef}[\movedefarity]
+{\subsection*{#1}
+  \begin{adjustwidth}{0.25in}{0.25in}
+    {\itshape #2}\vspace{0.2cm}
+  \end{adjustwidth}
+
+  #3}
+{}
+
+\section{Basic Moves}
+\label{sec:basic-moves}
+
+Below are the moves to which all heroes have access, regardless
+of their playbooks. Like their playbook moves, players can invoke
+them at any time that they are appropriate during a session.
+
+\input{basicmoves}
+
+\section{Special Moves}
+
+The following special moves only come up in particular circumstances.
+Players generally do not have agency over when they arise,
+but neither are they Narrator moves that are played in response
+to heroes' failures.
+
+\input{specialmoves}
+
+\section{Endurance and Rest}
+
+Each character has limited Endurance. Endurance is lost by being
+injured, such as in a brawl, by inhaling poisonous gas, or when
+falling off a rooftop. When a character loses Endurance, their
+player marks off a box on the Endurance tracker.
+Marking off an Endurance box with a ``-1'' means that the hero takes
+-1 to all rolls, independent of other bonuses or penalties.
+The character is said to be \emph{imperiled}.
+
+At the end of a scene, a character who is not imperiled may recover
+Endurance, at the Narrator's discretion. Essentially, if there is any
+time to catch your breath, you recover Endurance. A character who
+became imperiled recovers to just beyond peril threshold.
+
+A character who must lose Endurance and has no more spaces on the
+Endurance tracker is in \emph{critical condition}. The player chooses one of
+the following.
+\begin{choices}
+\item The character recovers Endurance at the Narrator's discretion but
+  suffers a permanent -1 to Mighty. 
+\item The character suffers a wound or trauma that permanently
+  bans them from heroic life, and the character becomes
+  an NPC.
+\item The character dies.
+\end{choices}
+If the character survives critical condition, the Narrator can
+determine how much Endurance is granted the character.
+
+\section{Sidekicks}
+
+Optionally, you can play \kapow{} with children who may not have the
+reading ability or patience to deal with moves and playbooks.
+These are called \emph{sidekicks}.
+Odds are that if you're playing with a sidekick, you know the kid
+and know they can handle.  The main idea here is that
+you can incorporate such players to the extent they will enjoy it, and
+it fits well in the genre.
+
+An easy way to create a sidekick is to have the player draw their
+character, and then you can ask them about it. Help them come up
+with a name that fits the genre, and that's about all you need.
+If they understand the idea of secret identities, you could have
+them also draw what the character looks like when not in costume.
+
+The rest of the team tracks their Bond with the sidekick, just like
+the other heroes. However, the sidekick does not need to bother with
+the bookkeeping of Bonds.
+
+Sidekicks don't need attributes, nor do they track Endurance.
+Rather, when they want to take an action that fits the normal
+rules for a move---that is, it fits the narrative and
+there's a reasonable chance of success or failure---have them
+roll two six-sided dice and add them together.
+On a roll of 7+, they succeed; otherwise, they fail.
+The Narrator may choose to take a move in response to the failure,
+but if they do, it should be something ``soft'' such as foreshadowing
+future trouble.
+
+\chapter{Narrator Rules}
+
+This chapter contains all the rules for the Narrator.
+As mentioned earlier, the Narrator needs to be familiar with all
+the rules in the game in order to keep a good flow.
+However, keep in mind one of the cardinal rules of tabletop
+role-playing: it's almost always better to rule on the fly and keep
+narrative momentum rather than stopping to look up an edge case.
+
+
+\section{Principles}
+
+There is a lot of freedom in \kapow{} to create interesting stories
+with your players. The following principles are designed to help
+you coordinate a good session.
+
+\newenvironment{principle}[2]
+{\subsection*{#1} #2}
+{}
+
+\input{principles}
+
+\section{Narrator Moves}
+\label{sec:narrator-moves}
+
+Like the players, the Narrator's actions in the game are expressed
+as \emph{moves}. However, the rhythm of the Narrator's moves is
+different from the players.
+There are two situations in which the Narrator gets to make a move.
+The first is when the players fail a roll, which gives the Narrator
+the opportunity to pick any move from the list.
+The second situation is when there is a lull in the action or the
+players seem to be looking to the Narrator to move the story forward;
+in this case also, the Narrator can choose any move from the list.
+
+\newenvironment{narratormove}[2]
+{\subsection*{#1} #2}
+{}
+
+\input{narratormoves}
+
+\section{Session Prep}
+\label{sec:session-prep}
+
+The Narrator is responsible for a bit of preparation before
+a session, but once familiar with the process, it should not take
+more than a few minutes.
+Remember the principle, ``play to find out what happens.''
+However, the camp superhero genre is so
+infused with the \textit{mystery} theme that it's worthwhile
+to make sure there's the spine of a story in place.
+A seasoned Narrator may believe they can spin a compelling caper
+extemporaneously, a few minutes of planning can help ensure a good
+experience for everyone. \kapow{} definitely builds upon the
+maxim that plans are worthless but planning is everything.
+
+For the first session, the Narrator should create a conventional
+over-the-top Villain and a relatively straightforward scheme.
+Both of these are defined in the next chapter.
+Facing this Villain will make new players more comfortable
+with the game, and more importantly, relationships between characters,
+Contacts, and the Villain will begin to form.
+You don't know ahead of time which playbooks will be in play,
+so it's best to keep the initial plan simple and iconic.
+
+For the second session, it is recommended that the Narrator make
+a slightly more elaborate Scheme with a different Villain. Try to
+set up distinctly different situations that require different kinds
+of skills. An advantage of the second session is that now you know
+what kinds of heroes you have in the team. This means you can work
+into the plan not just different locations and challenges, but also
+consider how different Contacts might be brought into the action.
+
+After the first two sessions, the Narrator should have a sense of the
+play style of the heroes. Give them some of what they want, but
+sometimes with a twist. Does a group like to rumble? Throw in an
+armored villain. Does the group like to investigate or stake out? Make
+a plot that requires thinking on their feet.
+
+The heroes will also have some history with the Villains. Remember to
+keep track of which heroes in particular offended the Villains and how.
+This has all the ingredients you need for a great arch-nemesis story.
+
+
+\chapter{Villains and Schemes}
+
+Don't let the heroes fool you: it's the Villains that really make
+the world of campy superhero adventure what it is.
+A Villain in \kapow{} is one-dimensional and over-the-top. It's the
+heroes' responses to the Villain's bizarre plans and ideas that
+make each story distinct and memorable.
+
+\section{Villains}
+
+It is generally up to the Narrator to create Villains, although
+other players may make contributions or even introduce one
+on the fly through investigation (see page~\pageref{move:investigate}).
+There are many places to draw inspiration for Villains.
+You can, of course, clone one of the classics of the genre,
+but it's also fun to make your own. Consider creating Villains
+who are inspired by characters from famous novels or folk tales,
+who draw from historical figures or cultures,
+or who see themselves as connected to animals, plants, or forces of nature.
+
+To start creating a Villain, you create a \emph{name}, a \emph{schtick},
+and an \emph{appearance}.
+These should all tie together into a cohesive, campy whole.
+The name is something short and memorable that reflects the character.
+The schtick is what makes the character unique---their motif, theme,
+or concept. The appearance ties the name and schtick together.
+
+\begin{example}
+  \emph{The Paradox}'s schtick is that he loves contradictions
+  and wordplay.
+  He wears a mask that is half black and half white, and he wears
+  a formal suit that is covered in black and white swirls and whorls.
+\end{example}
+
+Each Villain has a motivation for their life of crime. For most
+Villains, this is either wealth or power---and really, that's
+perfectly adequate for most games of \kapow{}. In some cases, a
+Villain may have a completely different sort of motivation, such as
+freeing all pets from the bondage of ownership, obtaining specific
+cultural artifacts from museums, or even destroying the city.  These
+motivations should be tied to the Villain's schtick.
+
+Villains have Endurance at a similar scale to the heroes,
+commonly a value between three and six.
+This value should reflect their schtick: craven madmen have lower
+Endurance than embittered ex-boxers.
+No Villain worth his or her salt will stand toe-to-toe against a team
+of heroes, dishing out punches until they are incapacitated.
+Generally, if a Villain is knocked about sufficiently, they should
+yield or try to bargain their way out of the situation.
+
+Every Villain has \emph{lackeys}. These are the henchmen who carry out
+the Villain's desires. The lackeys should have some unifying
+appearance, and they are named in keeping with the Villain's schtick.
+Generally, a Villain has enough lackeys for whatever it is that needs
+to be done, but not so many as to completely overwhelm the heroes in
+any given encounter.  Rank and file lackeys have one Endurance and are
+easily eliminated from a rumble. In rare cases, and where it matches
+their Villain's schtick, lackeys may be tougher. Keep in mind the
+principle to keep the story moving: a battle with lackeys should be a
+cinematic sequence and not a tactical wargame.
+
+\begin{example}
+The Paradox has a passel of lackeys that he derisively calls
+\textit{The Oxymorons}. They include
+Jumbo Shrimp,
+Small Crowd,
+Open Secret,
+Original Copy,
+and
+Random Order.
+The Oxymorons wear black slacks and shoes with white turtlenecks.
+Their names are clearly written upon their shirts---the first word in a blocky,
+monospace typeface and the second in calligraphic script.
+\end{example}
+
+Male villains are frequently accompanied by a female consort.
+They may simply be arm candy for the Villain, but more often they are
+implicated in the villain's scheme. Frequently, their association is secret,
+which allows the consort to operate in public without drawing untoward
+attention.
+
+The consort tends to be one of the following:
+\begin{choices}
+\item An innocent young girl who was turned toward criminality due
+  to a desperate or unfortunate situation. She may be persuaded
+  to turn on the Villain.
+\item A sweet-faced but internally-corrupted partner. She may
+  lure the heroes into thinking they can persuade her to turn
+  on the Villain, but it's a trap. (Setting up such a trap
+  is a good example of the Narrator's \move{turn their move back
+    on them} move.)
+\item A strong, confident villain in her own right, who may very
+  well be pulling the strings of her companion for her own
+  nefarious scheme.
+\end{choices}
+
+\section{Villainous Schemes}
+\label{sec:schemes}
+
+Each session is defined by a Villainous Scheme. While it is possible
+to set up multiple simultaneous Villainous Schemes, it is recommended
+to let the heroes focus on one at a time: think of it like
+each episode having a special guest villain who is guaranteed some
+amount of time to chew up the scenery.
+
+A villainous scheme is comprised of the Goal, the Hideout, the Setup,
+the Hook, and the Plan.
+
+\subsection*{The Goal}
+The \emph{goal} is the Villain's endgame, the whole purpose for the scheme.
+It should relate to the Villain's primary motivation.
+
+\begin{example*}
+  \begin{itemize}
+  \item Acquire the wealth and status of the dowager widow.
+  \item Break the old gang out of prison.
+  \item Steal the priceless diamond necklace and sell it on the black market.
+  \item Have vengeance on the heroes by humiliating them
+    at their own headquarters.
+  \end{itemize}
+\end{example*}
+
+\subsection*{The Hideout}
+The Villain needs some strategic location from which to execute
+his master plan. This is the \emph{hideout}.
+The hideout should be tied, either directly or ironically,
+to the Villain's scheme or schtick.
+Generally, the hideout
+should not be revealed to the heroes until the ramp up to the climax
+or a cliffhanger.
+
+It is a good idea to annotate a hideout with an appropriately
+villainous deathtrap. This allows the Villain to capture one or
+more heroes, tie them up, reveal his plan, and then walk away
+and assume everything is going to be fine.
+
+\begin{example}
+  The Paradox is hiding out in the Bittersweet Chocolate Company
+  factory in the industrial district. He has vengeance on his mind,
+  and he has set up a life-size mold of Black Mask. If he can
+  just capture Black Mask, then The Paradox will put him into the mold
+  and start heating up the chocolate.
+  As soon as the chocolate reaches a high enough temperature, it will
+  pour into the mold. ``Sorry that I cannot stay to see you turned
+  into the world's largest chocolate hero, but I have a date with
+  a priceless Mesopotamian scroll at the World History Museum. Ta-ta!''  
+\end{example}
+
+\subsection*{The Setup}
+The \emph{setup} is what the Villain has already accomplished by the
+time the players come to the table. It cannot be stopped, but the heroes
+may be able to ask questions about it in order to discover important
+clues.
+
+\subsection*{The Hook}
+\label{sec:hook}
+The \emph{hook} is the event that brings the heroes into the action.
+It may be that the heroes are in the right place at the right time,
+either by happenstance or by the Villain's intent (particularly
+one who is motivated by revenge).
+Most frequently, however, it is a call from a Contact that gives
+heroes enough information to start making moves.
+
+\begin{example}
+  ``Black Mask: you get a call from Alan, your butler, who tells you
+  that he just saw a giant clown balloon being paraded down the
+  street by a group of dangerous-looking mimes. What do you do?''
+\end{example}
+
+\subsection*{The Plan}
+
+The \emph{plan} is how the Villain will meet the goal if he
+is not interrupted.
+When the Narrator takes the \move{advance a villainous scheme} action,
+a step of the plan is completed.
+
+The Narrator articulates the plan in order to have
+an idea of how the Villain will proceed. It should never be used
+to railroad the heroes into a particular encounter path. Let the Villain
+modify their plans as reasonable; the Narrator's ability to announce
+off-screen trouble or foreshadow trouble are useful here.
+
+It works well to articulate the plan as a simple series of verb
+clauses, such as ``break into the museum,'' ``kidnap the porter,''
+or ``take the diamonds to the fence.''
+
+When the heroes inevitably catch up with the Villain and his lackeys,
+it's generally a good idea to have a few more lackeys than heroes.
+The real threat of the lackeys is often that they take time and attention
+away from whatever the Villain is really trying to accomplish.
+The Villain himself will not engage in combat while there are
+enough lackeys to engage the heroes; indeed, some Villains may
+never rumble at all, choosing escape or surrender over fisticuffs.
+
+
+\chapter{References}
+
+The main referent for establishing the genre is, of course,
+the classic \textit{Batman} television series of the late 1960s.
+The comics books of the same period portray a similar style.
+Interested readers should look up the 1954 criteria of the
+Comics Code Authority~(CCA). The CCA is a fascinating historical
+document for understanding the cultural constraints placed on
+mainstream artistic expression. The CCA rules actually provide
+an excellent basis for campy adventures in \kapow{}.
+
+This game is clearly inspired by D.\ Vincent Baker's and Meguey
+Baker's excellent post-apocalyptic role-playing game,
+\textit{Apocalypse World}. The author appreciates their inventiveness
+as well as their openness to the community.
+Interested readers should certainly investigate both
+\textit{Apocalypse World} itself and the ``powered by the apocalypse''
+movement at \url{apocalypse-world.com}.
+
+Ending the session on a cliffhanger is a genre-appropriate
+adaptation of the session end timer from
+Brandish Gilhelm's inspiring \textit{Index Card RPG}.
+
+This work was created as part of National Game Design Month (NaGaDeMon)
+2019. Thanks to Nathan Russell for organizing the event and to the
+NaGaDeMon Facebook group for their support and feedback.
+
+\end{document}

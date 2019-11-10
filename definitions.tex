@@ -1,0 +1,30 @@
+\usepackage{enumitem}
+\usepackage{pifont}
+\usepackage[xcolor]{mdframed}
+
+\newcommand{\kapow}{K\textsc{apow}}
+
+\newcommand{\move}[1]{\textbf{#1}}
+
+\newcommand{\onamiss}{On a miss, be prepared for the worst.}
+
+% The number of arguments to the movedef command
+\newcommand{\movedefarity}{3}
+
+\newenvironment{choices}
+{\begin{itemize}[label=-,topsep=0cm]\itemsep-0.1cm}
+{\end{itemize}}
+
+\newenvironment{chooseone}
+{\begin{itemize}[label=\ding{109},topsep=0cm]\itemsep-0.1cm}
+  {\end{itemize}}
+
+% Environment for rulebook examples.
+\mdfdefinestyle{example}{backgroundcolor=gray!20,hidealllines=true}
+\newenvironment{example}
+{\begin{mdframed}[style=example]\textbf{\textit{Example: }}}
+  {\end{mdframed}}
+
+\newenvironment{example*}
+{\begin{mdframed}[style=example]\textbf{\textit{Examples: }}}
+{\end{mdframed}}
