@@ -46,7 +46,7 @@ the files, you should install the following packages:
 - `texlive-latex-base`
 - `texlive-latex-extra`
 - `texlive-latex-recommended`
-- `texlife-font-utils`
+- `texlive-font-utils`
 
 Running [`build.sh`](build.sh) will generate a set of PDF files from the LaTeX
 sources.
