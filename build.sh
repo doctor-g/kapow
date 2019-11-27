@@ -15,3 +15,9 @@ pdflatex kapow-rules
 for source in ${HANDOUTS}; do
     pdflatex "$source"
 done
+
+# Make the distribution directory
+mkdir -p dist
+
+# Copy all the required files into it
+cp kapow*pdf logo.png index.html dist

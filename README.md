@@ -4,14 +4,8 @@
 
 ## Get the game
 
-Everything you need to play the game is free to download
-from this site.
-
-- [Rulebook](kapow-rules.pdf)
-- [Hero Playbooks](kapow-playbook-handouts.pdf)
-- [Hero Moves Handout](kapow-moves-handout.pdf)
-- [Team Handout](kapow-team-handout.pdf)
-- [Narrator Handout](kapow-narrator-handout.pdf)
+Everything you need to play the game is free to download 
+[from the public project site](https://doctor-g.github.io/kapow).
 
 ## About this game
 
@@ -20,10 +14,6 @@ This game was created for [National Game Design Month
 
 All the materials are licensed under 
 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
-
-The author gives credit and gratitude to the works that
-inspired this game, especially [the 1960s Batman television series](https://en.wikipedia.org/wiki/Batman_(TV_series)) 
-and the [Apocalypse World RPG](http://apocalypse-world.com/).
 
 ## Contributing
 
@@ -50,3 +40,6 @@ the files, you should install the following packages:
 
 Running [`build.sh`](build.sh) will generate a set of PDF files from the LaTeX
 sources.
+
+Running [`deploy.sh`](deploy.sh) will rebuild the project and deploy the generated files 
+to `gh-pages`.
